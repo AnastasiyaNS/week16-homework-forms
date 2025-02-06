@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Форма регистрации</title>
+</head>
+<body>
+    <main class="main">
+        <h1>Форма регистрации пользователя</h1>
+    <form name="formRegistration" class="main__form">
+        <div class="wrap-form">
+        <label for="name" class="form__label">Имя:</label>
+        <span id="nameErr" class="error"></span>
+        <input type="text" class="input-field" name="username" id="username" placeholder="Имя пользователя" minlength="2" maxlength="20" pattern="^[a-zA-Zа-яА-Я]+$" required>
+        </div>
+
+        <div class="wrap-form">
+        <label for="email" class="form__label">E-mail:</label>
+        <span id="emailErr" class="error"></span>
+        <input type="email"  class="input-field"name="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="wrap-form">
+        <label for="age" class="form__label">Возраст:</label>
+        <span id="ageErr" class="error"></span>
+        <input type="number"class="input-field" name="age" id="age" placeholder="Возраст пользователя" required>
+        </div>
+
+        <div class="radio-block">
+        <input type="radio" class="input-field" name="gender" id="man" value="Мужчина">
+        <label for="man" class="form__label">Мужчина</label>
+        
+        <input type="radio" class="input-field" name="gender" id="woman"  value="Женщина">
+        <label for="woman" class="form__label">Женщина </label>
+        </div>
+
+        <div class="wrap-form">
+        <label for="profession" class="form__label">Профессия:</label>
+        <select name="profession" id="profession" placeholder="Профессия" required>
+            <option value="Врач">Врач</option>
+            <option value="Программист">Программист</option>
+            <option value="Учитель">Учитель</option>
+            <option value="Дизайнер">Дизайнер</option>
+            <option value="Инженер">Инженер</option>
+            <option value="Продавец">Продавец</option>
+            <option value="Другое">Другое</option>
+        </select>
+        </div>
+
+        <div class="wrap-form">
+        <label for="password" class="form__label">Введите пароль ( 8-20 символов.Минимум 1 заглавная и 1 строчная буква, 1 цифра):</label>
+        <span id="passErr" class="error"></span>
+        <input type="text" class="input-field" name="password" 
+        placeholder="Введите пароль" minlength="8" maxlength="20" pattern="^[a-zA-Z0-9\d!@#$%^&*]{8,20}" required />
+        </div>
+
+        <div class="checkbox-block">
+        <input type="checkbox" class="input-field" name="consent" id="consent" placeholder="Согласие"
+        value="Да, согласен(а)" required>*
+        <label for="consent" class="form__label">Я согласен(-а) на обработку данных</label>
+        <span id="consErr" class="error"></span>
+        </div>
+
+    <button type="submit" name="button" id="button" disabled="true" >Отправить</button>
+
+    </form>
+</main>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

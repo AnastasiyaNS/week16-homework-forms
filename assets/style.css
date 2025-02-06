@@ -1,0 +1,44 @@
+h1{
+    margin: 0 auto;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 20px;
+    border: 1px solid #000000;
+    background: #fff;
+    padding: 10px;
+    background-color: rgba(240, 243, 84, 0.216);
+}
+
+.main__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap-form, .radio-block, .checkbox-block{
+    margin-bottom: 10px;
+    padding-left:30px;
+}
+
+.input-field{
+    margin-left: 10px;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+}
+
+#button {
+    margin-left: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.error {
+    color: rgb(229, 86, 20);
+    font-weight: bold;
+  }
